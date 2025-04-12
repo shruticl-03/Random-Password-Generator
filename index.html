@@ -13,12 +13,12 @@
         <h1>Generate a <br> <span>Random Password</span></h1>
         <div class="display">
             <input type="text" id="password" placeholder="Password">
-            <img src="images/copy.png">
+            <img src="images/copy.png" onclick="copyPassword()">
         </div>
         <button onclick="createPassword()"><img src="images/generate.png">Generate Password</button>
 
     </div>
-
+s
     <script>
         const passwordBox = document.getElementById("password");
         const length = 12;
@@ -45,7 +45,11 @@
 
         }
 
-
+        //select the command to copy
+        function copyPassword(){
+            passwordBox.select();
+            document.execCommand("copy");
+        }
 
     </script>
 
