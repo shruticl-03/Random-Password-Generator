@@ -15,7 +15,7 @@
             <input type="text" id="password" placeholder="Password">
             <img src="images/copy.png">
         </div>
-        <button><img src="images/generate.png">Generate Password</button>
+        <button onclick="createPassword()"><img src="images/generate.png">Generate Password</button>
 
     </div>
 
@@ -41,6 +41,7 @@
             while (length > password.length) {
                 password += allChars[Math.floor(Math.random() * allChars.length)];
             }
+            passwordBox.value = password;
 
         }
 
